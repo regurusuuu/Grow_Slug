@@ -1,0 +1,40 @@
+<ons-page>
+  <ons-toolbar>
+    <div class="left"><ons-back-button>もどる</ons-back-button></div>
+    <div class="center">ログイン</div>
+  </ons-toolbar>
+  <head>
+    <link rel="stylesheet" href="./css/login.css">
+  </head>
+
+    <div class="login-form">
+
+        <input type="name" class="text-input--underbar" placeholder="なまえ" id="user_name" value="">
+        <br><br>
+        <input type="password" class="text-input--underbar" placeholder="パスワード" id="password" value="">
+        <br>
+        
+        <p>おとこのこ？おんなのこ？</p>
+        
+        <div class="button-bar" style="width:100%;margin:0 auto;">
+            <div class="button-bar__item">
+                <input type="radio" name="segment-a" value="male" checked>
+                <button class="button-bar__button">おとこのこ</button>
+            </div>
+            <div class="button-bar__item">
+                <input type="radio" name="segment-a" value="female">
+                <button class="button-bar__button">おんなのこ</button>
+            </div>    
+        </div>
+        
+        <br><br>
+        <ons-button modifier="large" class="login-button" onclick="userLogin(false)">ログイン</ons-button>
+        <br><br>
+        <ons-button modifire="large" class="signup-button" onclick="userLogin(true)">または新規登録</ons-button>
+        <br>
+
+        
+        <!--<ons-button modifier="quiet" class="forgot-password">Forgot password?</ons-button>-->
+    </div>
+
+</ons-page>

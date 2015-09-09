@@ -1,0 +1,8 @@
+/* This is a CSS file */
+
+#title {
+    text-align: center;
+    color: yellow;
+    font-weight: bold;
+    font-size:30px;
+}

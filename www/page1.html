@@ -1,0 +1,24 @@
+<ons-page id="page1">
+<ons-toolbar>
+    <div class="center">Page1</div>
+</ons-toolbar>
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/page1_style.css">
+</head>
+<body>
+    <ons-button class="inner" ng-click="myNavigator.pushPage('page2.html');">
+        進化
+    </ons-button>
+    <div class="inner">
+        <img id="slug" src="./elements/slug.jpg" width="200" height="100">
+    </div>
+    <div id="hunger" class="inner">
+        <p class="inner" id="onaka">おなか</p>
+        <ul class="gauge_wrap">
+            <li class="inner">
+                <div class="inner"><div class="gauge_main" id="onaka_rate";"></div></div>
+            </li>
+        </ul>
+    </div>
+</body>
+</ons-page>
