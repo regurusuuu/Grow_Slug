@@ -1,0 +1,138 @@
+/* This is a CSS file */
+
+body {
+    background: navy;
+}
+
+section .inner div {
+    opacity: 0;
+    -webkit-transform-origin: 0px 0px;
+    -ms-transform-origin: 0px 0px;
+    transform-origin: 0px 0px;
+    -webkit-animation-name: Drop;
+    animation-name: Drop;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+#snow .inner div {
+    position: absolute;
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 2.5px;
+    background: #fff;
+}
+
+#snow .inner div.flake2,
+#snow .inner div.flake4,
+#snow .inner div.flake6,
+#snow .inner div.flake8 {
+    background-size: 5px 6px !important;
+}
+
+.flake1 {
+    left: 30%;
+    -webkit-animation-duration: 2.5s;
+    animation-duration: 2.5s;
+}
+
+.flake2 {
+    left: 35%;
+    -webkit-animation-duration: 2.7s;
+    animation-duration: 2.7s;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.flake3 {
+    left: 40%;
+    -webkit-animation-duration: 2.9s;
+    animation-duration: 2.9s;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.flake4 {
+    left: 45%;
+    -webkit-animation-duration: 2.4s;
+    animation-duration: 2.4s;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+.flake5 {
+    left: 50%;
+    -webkit-animation-duration: 2.4s;
+    animation-duration: 2.4s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.flake6 {
+    left: 55%;
+    -webkit-animation-duration: 2.2s;
+    animation-duration: 2.2s;
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+
+.flake7 {
+    left: 60%;
+    -webkit-animation-duration: 2.7s;
+    animation-duration: 2.7s;
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+
+.flake8 {
+    left: 70%;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-delay: 1.4s;
+    animation-delay: 1.4s;
+}
+
+@-webkit-keyframes Drop {
+    0% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        opacity: 0;
+    }
+
+    50% {
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+        opacity: 0.3;
+    }
+}
+
+@keyframes Drop {
+    0% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        opacity: 0;
+    }
+
+    50% {
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+        opacity: 0.3;
+    }
+}

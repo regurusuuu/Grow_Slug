@@ -6,17 +6,34 @@
     <link rel="stylesheet" type="text/css" href="./css/page1_style.css">
 </head>
 <body>
-    <ons-button class="inner" ng-click="myNavigator.pushPage('page2.html');">
+    <ons-button class="inner" id="ev" onclick="ev_kari()">
         進化
     </ons-button>
-    <div class="inner">
-        <img id="slug" src="./elements/slug.jpg" width="200" height="100">
+    <ons-button 
+        ng-click="myNavigator.pushPage('grave.html')">
+        殺
+    </ons-button>
+    
+    <div class="inner" id="namespace">
+        なまえ
     </div>
+
+    <div class="inner" id="now_weather">
+            
+    </div>
+    
+    <div class="inner" id="slug-div">
+        <img id="slug" src="./elements/sozai_003.png" width="200" height="140">
+    </div>
+    <div class="inner" id="gome-div">
+        <input type="image" name="Go_Me" id="Go_Me" src="./elements/slug2.png" width="40" height="40" onclick="throwGome()">
+    </div>
+
     <div id="hunger" class="inner">
         <p class="inner" id="onaka">おなか</p>
         <ul class="gauge_wrap">
             <li class="inner">
-                <div class="inner"><div class="gauge_main" id="onaka_rate";"></div></div>
+                <div class="inner"><div class="gauge_main" id="onaka_rate"></div></div>
             </li>
         </ul>
     </div>

@@ -3,8 +3,12 @@
 // 位置情報を取得し，それに応じた現在地の天気を取得する
 $(function() {
    
-   find();
-   
+});
+
+document.addEventListener("pageinit", function(e){
+    if (e.target.id == "page1") {
+        find();
+    }
 });
 
 //位置情報取得に成功した場合のコールバック
@@ -52,6 +56,32 @@ function getWeather (current) {
     var url = "http://api.openweathermap.org/data/2.5/weather?lat="+ lat +"&lon=" + long;
 
    $.getJSON(url, function(data) {
-        console.log(data);
+        weather = data.weather[0].main;
+        //console.log(weather);
+        displayWeather(weather);
    });
 }
+
+// お天気マークを表示する
+function displayWeather(weather) {
+    console.log(weather);
+    switch(weather) {
+        case "Clear": 
+            img = 'elements/sozai_004.png';
+            break;
+        case "Rain":
+            img = 'elements/sozai_002.png';
+            break;
+        case "Cloud":
+            img = 'elements/sozai_005.png';
+            break;
+        case "Snow":
+            img = 'elements/sozai_001.png';
+            break;
+        default:
+            img = "";
+    }
+        $("#now_weather").html("<img id='weather' src="+img+" width='200' height='140'>");
+    
+}
+

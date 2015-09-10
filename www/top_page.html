@@ -9,13 +9,14 @@
     <br />
     <br />
     <p id="title">めくりめくなめくじ</p>
-    <p>ここになめくじの画像を入れたい。</p>
-    <br />
+    <div Align="center">
+        <img id='slug' src='./elements/sozai_003.png' width='200' height='140'>
+    </div>
     <br />
     
     <div style="text-align: center;">
         <ons-button 
-            ng-click="myNavigator.pushPage('login.html')">
+            onclick="checkCurrentUser()">
             START!!
         </ons-button>
         
@@ -23,6 +24,7 @@
             ng-click="myNavigator.pushPage('page1.html')">
             Page1
         </ons-button>
+        <ons-button onclick="logout()">logout</ons-button>
         
         
         <br />
@@ -31,6 +33,8 @@
             ng-click="myNavigator.pushPage('navigator.html')">
             メインページ
         </ons-button>
+        
+        
     </div>
 
 </ons-page>

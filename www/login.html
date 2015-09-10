@@ -8,11 +8,14 @@
   </head>
 
     <div class="login-form">
-
+    
+        <p>なめくじのなまえを決めてね</p>
         <input type="name" class="text-input--underbar" placeholder="なまえ" id="user_name" value="">
-        <br><br>
+        <br>
+        <!--
         <input type="password" class="text-input--underbar" placeholder="パスワード" id="password" value="">
         <br>
+        -->
         
         <p>おとこのこ？おんなのこ？</p>
         
@@ -27,12 +30,15 @@
             </div>    
         </div>
         
+        <!--
         <br><br>
         <ons-button modifier="large" class="login-button" onclick="userLogin(false)">ログイン</ons-button>
         <br><br>
         <ons-button modifire="large" class="signup-button" onclick="userLogin(true)">または新規登録</ons-button>
         <br>
-
+        -->
+        <br>
+        <ons-button modifire="large" class="login-button" onclick="userLogin(true)">決定！</ons-button>
         
         <!--<ons-button modifier="quiet" class="forgot-password">Forgot password?</ons-button>-->
     </div>

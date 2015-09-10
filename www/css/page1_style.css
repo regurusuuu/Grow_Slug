@@ -1,9 +1,15 @@
 /* This is a CSS file */
-*:not(.inner):not(.gauge_wrap):not(.gauge_main):not(.center):not(.left){
+/**:not(.inner):not(.gauge_wrap):not(.gauge_main):not(.center):not(.left):not(#slug){
     background-image:url("../elements/background.png");
-}
+}*/
 #slug{
     margin:200px 60px 0px;
+}
+
+#Go_Me{
+    position:absolute;
+    left:150px;
+    top:300px;
 }
 
 #hunger{
@@ -11,7 +17,7 @@
 }
 
 #onaka{
-    color:white;
+    color:#ff33cc;
 }
 
 .gauge_wrap li > div {
@@ -31,4 +37,26 @@
     background: -webkit-gradient(linear, left top, left bottom, from(#0FF), to(#0FF));
     background:#0FF;
     height: 22px;
+}
+
+#namespace {
+    position: absolute;
+    color: white;
+    border:solid 3px #222;
+    border-radius: 5%;
+    border-style: ridge;
+    background: #8b4513;
+    margin:auto;
+    right: 1%;
+    top: 5px;
+    width: 8em;
+    text-align: right;
+    padding-right: 10px;
+}
+
+#now_weather {
+    position: absolute;
+    top: 50px;
+    left:20%;
+    right:20%;
 }
