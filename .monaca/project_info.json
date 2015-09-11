@@ -2,7 +2,8 @@
     "plugins": [
         "mobi.monaca.plugins.Monaca",
         "org.apache.cordova.splashscreen",
-        "org.apache.cordova.geolocation"
+        "org.apache.cordova.geolocation",
+        "plugin.push.nifty"
     ],
     "framework_version": "3.5",
     "xcode_version": "6",

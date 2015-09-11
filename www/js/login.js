@@ -8,8 +8,11 @@ $(function() {
     monaca.getDeviceId(function(id) {
         deviceId = id;
         console.log('DeviceId :' + deviceId);
+        //alert(deviceId);
     });
 });
+
+
 
 //ログイン済みかを確認する
 function checkCurrentUser(){
@@ -34,8 +37,11 @@ function userLogin(signUpFlag) {
     // 名前と性別を取得
     var userName = $("#user_name").val();
     var sex = $("input[name='segment-a']:checked").val();
+    var date = new Date();
+    var interior = [0,0,0];
     
     // 端末情報をパスワードとして設定
+    console.log(deviceId);
     var password = deviceId;
     
     var callBack = {
@@ -57,6 +63,9 @@ function userLogin(signUpFlag) {
         user.set("userName", userName);
         user.set("password", password);
         user.set("sex", sex);
+        user.set("salt",100);
+        user.set("date", date);
+        user.set("interior", interior);
         // ACLをセット
         user.setACL(new NCMB.ACL({"*":{"read":true, "write":true}}));
         
@@ -74,5 +83,30 @@ function logout() {
         alert("ログアウトしました");
     } else {
         alert("ログインしてないよ");
+    }
+}
+
+function nowDate() {
+    var now_date = new Date();
+    //var yy = date.getFullYear();
+    //var mm = date.getMonth();
+    //var dd = date.getDate();
+    //var now_date = yy + "/"+ mm +"/" +dd;
+    
+    if (NCMB.User.current()) {
+        var last_date = NCMB.User.current().get("date");
+        diff = now_date - last_date;
+        //var diffDay = diff / 86400000;
+        var diffDay = diff / 60000;
+        if (diffDay >= 1) {
+            NCMB.User.current().set("date", now_date);
+            alert("ログインボーナス+100塩");
+            var salt = NCMB.User.current().get("salt");
+            salt += 100;
+            NCMB.User.current().set("salt", salt);
+            NCMB.User.current().save();
+        } else {
+            console.log(diffDay);
+        }
     }
 }

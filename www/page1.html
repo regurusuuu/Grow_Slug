@@ -6,16 +6,22 @@
     <link rel="stylesheet" type="text/css" href="./css/page1_style.css">
 </head>
 <body>
-    <ons-button class="inner" id="ev" onclick="ev_kari()">
-        進化
+    <ons-button class="inner" id="ev" onclick="throwGome()">
+        掃除
     </ons-button>
     <ons-button 
         ng-click="myNavigator.pushPage('grave.html')">
         殺
     </ons-button>
+    <ons-button onclick="putGome()">
+        ゴミ
+    </ons-button>
     
     <div class="inner" id="namespace">
         なまえ
+    </div>
+    <div class="inner" id="saltspace">
+    
     </div>
 
     <div class="inner" id="now_weather">
@@ -26,9 +32,23 @@
         <img id="slug" src="./elements/sozai_003.png" width="200" height="140">
     </div>
     <div class="inner" id="gome-div">
-        <input type="image" name="Go_Me" id="Go_Me" src="./elements/slug2.png" width="40" height="40" onclick="throwGome()">
+        <!--
+        <a href="#"><img type="image" name="Go_Me" id="Go_Me" src="./elements/Go_Me.png" width="40" height="40" onclick="throwGome();this.src='./elements/dummy.png';this.width='1';this.height='1';"></a>
+        -->
+            
     </div>
-
+    <!--
+    <a href="https://twitter.com/intent/tweet?text=こんにちは">
+        こんにちは
+    </a>
+    -->
+    
+    <a href="#" onclick="twi();">ﾂｲｰﾖ</a>
+    
+    <div id="inter_display_i" class="inter_display_c">
+        <img src="./elements/dummy.png" id="haniwa_display" width="38" height="75"></img>
+    </div>
+    
     <div id="hunger" class="inner">
         <p class="inner" id="onaka">おなか</p>
         <ul class="gauge_wrap">

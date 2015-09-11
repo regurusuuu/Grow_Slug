@@ -12,6 +12,31 @@
     top:300px;
 }
 
+.trash {
+    width: 200px;
+}
+.trash a {
+  display:trash;
+  width:99px;
+  background:url("./element/slug2.png") #bbb repeat-x top left;
+  color:#333;
+  float:left;
+  border-right:1px solid #777;
+  padding:7px 0;
+}
+.block a.r {width:100px; border:none;}   /* 上書き */
+
+/* link */
+.block a:link    {color:#333; text-decoration:none;}   /* リンク */
+.block a:visited {color:#333; text-decoration:none;}   /* 訪問済みリンク */
+.block a:hover   {color:#fff; background:url("./element/Go_Me.png") #777 repeat-x top left;}   /* ポイント時のリンク */
+.block a:active  {color:#fff; background:url("./element/Go_Me.png") #555 repeat-x top left;}   /* アクティブなリンク */
+
+a:hover {
+    left:1000px;
+    top:3000px;
+}
+
 #hunger{
     margin:20px 0px 50px 0px;
 }
@@ -59,4 +84,11 @@
     top: 50px;
     left:20%;
     right:20%;
+}
+
+#saltspace {
+    position:absolute;
+    top: 40px;
+    left: 3px;
+    font-weight: bold;
 }

@@ -1,8 +1,29 @@
 <ons-page>
         
     <ons-toolbar>
+        <div class="left"><ons-back-button>もどる</ons-back-button></div>
         <div class="center">はたあげゲーム！</div>
     </ons-toolbar>
-
-    <p>This is the Onsen Page Template.</p>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./css/game.css">
+    </head>
+    
+    <body>
+    
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div Align="center">
+            <img id='slug' src='./elements/sozai_026.png' width='230' height='160'>
+        </div>
+        <br />
+        <br />
+        <div Align="center" id="start">
+            <ons-button onclick="myNavigator.pushPage('Game_now.html'); Game_Start();">ゲームスタート</ons-button>
+        </div>
+    
+    </body>
+    
 </ons-page>
