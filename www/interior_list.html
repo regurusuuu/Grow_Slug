@@ -5,9 +5,19 @@
         <div class="center">インテリア一覧</div>
     </ons-toolbar>
 
-    <ons-row>
-        <ons-col class="set_haniwa"><ons-button onclick="alert('はにわを　ゲットした▼');setORremoveIn(0,1);">得はにわ</ons-button></ons-col>
-        <ons-col class="remove_haniwa"><ons-button onclick="alert('はにわを　投げた▼');setORremoveIn(0,0);">投はにわ</ons-button></ons-col>
+<div>
+    <ons-row align="center">
+        <ons-col class="set_haniwa"><ons-button onclick="alert('はにわを　つかまえた！▼');setORremoveIn(0,1);">得はにわ</ons-button></ons-col>
+        <ons-col class="remove_haniwa"><ons-button onclick="alert('はにわを　にがした▼\nバイバイ！　はにわ！▼');setORremoveIn(0,0);">捨はにわ</ons-button></ons-col>
+    </ons-row>
+    <ons-row align="center">
+        <ons-col class="set_moai"><ons-button onclick="alert('モアイを　つかまえた▼');setORremoveIn(1,1);">得モアイ</ons-button></ons-col>
+        <ons-col class="remove_moai"><ons-button onclick="alert('モアイを　にがした▼\nバイバイ！　モアイ！▼');setORremoveIn(1,0);">捨モアイ</ons-button></ons-col>
+    </ons-row>
+    <ons-row align="center">
+        <ons-col class="set_ajisai"><ons-button onclick="alert('アジサイを　つかまえた▼');setORremoveIn(2,1);">得アジサイ</ons-button></ons-col>
+        <ons-col class="remove_ajisai"><ons-button onclick="alert('アジサイを　にがした▼\nバイバイ！　アジサイ！▼');setORremoveIn(2,0);">捨アジサイ</ons-button></ons-col>
     </ons-row>
     
+</div>
 </ons-page>

@@ -1,9 +1,12 @@
 <ons-page id="page1">
 <ons-toolbar>
-    <div class="center">Page1</div>
+    <div class="center">めいん</div>
 </ons-toolbar>
 <head>
     <link rel="stylesheet" type="text/css" href="./css/page1_style.css">
+    <script type="text/javascript">
+        console.log("init");
+    </script>
 </head>
 <body>
     <ons-button class="inner" id="ev" onclick="throwGome()">
@@ -20,6 +23,12 @@
     <div class="inner" id="namespace">
         なまえ
     </div>
+    <br />
+    
+    <div style="text-align:right;">
+        <a href="#" onclick="twi()">ﾂｲｰﾖ</a>
+    </div>
+    
     <div class="inner" id="saltspace">
     
     </div>
@@ -37,19 +46,28 @@
         -->
             
     </div>
+    
+    <div id="haniwa_display_i" class="haniwa_display_c" style="float:left;">
+        <img src="./elements/dummy.png" id="haniwa_display" width="38" height="75"></img>
+    </div>
+    <div id="moai_display_i" class="moai_display_c" style="float:left;">
+        <img src="./elements/dummy.png" id="moai_display" width="54" height="80"></img>
+    </div>
+    <div id="ajisai_display_i" class="ajisai_display_c" style="float:left;">
+        <img src="./elements/dummy.png" id="ajisai_display" width="48" height="52"></img>
+    </div>
+    
+    <br />
+    
     <!--
     <a href="https://twitter.com/intent/tweet?text=こんにちは">
         こんにちは
     </a>
     -->
+
     
-    <a href="#" onclick="twi();">ﾂｲｰﾖ</a>
     
-    <div id="inter_display_i" class="inter_display_c">
-        <img src="./elements/dummy.png" id="haniwa_display" width="38" height="75"></img>
-    </div>
-    
-    <div id="hunger" class="inner">
+    <div id="hunger" class="inner" style="clear:both;">
         <p class="inner" id="onaka">おなか</p>
         <ul class="gauge_wrap">
             <li class="inner">

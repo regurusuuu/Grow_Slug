@@ -24,7 +24,8 @@ function checkCurrentUser(){
     
     if (NCMB.User.current()){
         //ログイン済みであればメニューの表示
-        myNavigator.pushPage("main_page.html", options);
+        nowDate();
+        myNavigator.pushPage("main_page.html");  
     } else {
         //未ログインの場合はログイン画面を表示
         myNavigator.pushPage("login.html", options);
@@ -94,17 +95,25 @@ function nowDate() {
     //var now_date = yy + "/"+ mm +"/" +dd;
     
     if (NCMB.User.current()) {
-        var last_date = NCMB.User.current().get("date");
+        var user = NCMB.User.current();
+        var last_date = user.get("date");
+        var salt = user.get("salt");
         diff = now_date - last_date;
         //var diffDay = diff / 86400000;
         var diffDay = diff / 60000;
         if (diffDay >= 1) {
-            NCMB.User.current().set("date", now_date);
             alert("ログインボーナス+100塩");
-            var salt = NCMB.User.current().get("salt");
             salt += 100;
-            NCMB.User.current().set("salt", salt);
-            NCMB.User.current().save();
+            user.set("salt", salt);
+            user.set("date", now_date);
+            user.save(null, {
+                success: function(results) {
+                    console.log("result: " + results);
+                },
+                error: function(results, error) {
+                    console.log(error);
+                }
+            });
         } else {
             console.log(diffDay);
         }

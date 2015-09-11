@@ -81,7 +81,7 @@ function displayWeather(weather) {
         default:
             img = "";
     }
-        $("#now_weather").html("<img id='weather' src="+img+" width='200' height='140'>");
+        $("#now_weather").html("<img id='weather' src="+img+" width='140' height='80'>");
     
 }
 

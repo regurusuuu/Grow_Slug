@@ -3,7 +3,7 @@
     background-image:url("../elements/background.png");
 }*/
 #slug{
-    margin:200px 60px 0px;
+    margin:70px 60px 0px;
 }
 
 #Go_Me{
@@ -38,11 +38,18 @@ a:hover {
 }
 
 #hunger{
+    position: absolute;
+    top: 70%;
+    right: 2%;
     margin:20px 0px 50px 0px;
 }
 
 #onaka{
     color:#ff33cc;
+}
+
+.gauge_wrap {
+    list-style: none;
 }
 
 .gauge_wrap li > div {
@@ -54,7 +61,7 @@ a:hover {
 }
 
 .gauge_wrap{
-    margin-top:-30px;
+    margin-top:-10px;
     margin-left:-35px;
 }
 .gauge_wrap .gauge_main {
@@ -82,8 +89,8 @@ a:hover {
 #now_weather {
     position: absolute;
     top: 50px;
-    left:20%;
-    right:20%;
+    left:30%;
+    right:30%;
 }
 
 #saltspace {
